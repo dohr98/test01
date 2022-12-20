@@ -1,0 +1,75 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    line-height: 1;
+    color: #333;
+    font-family: 'GmarketSansMedium';
+}
+/* cont01 */
+.cont01{
+    background-color: blanchedalmond;
+    padding: 100px 0;
+}
+.cont01 .inner{
+    width: 1280px;
+    margin: 0 auto;
+}
+.cont01 .inner .list{
+    display: flex;
+    justify-content: space-between;
+}
+.cont01 .inner .list .item{
+    width: 23%;
+}
+.cont01 .inner .list .item div{
+    width: 100%;
+    position: relative;/* div를 중심축으로 p태그가 top 0, left 0 만큼 이동 */
+    /* height: 320px; */
+}
+.cont01 .inner .list .item div img{
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
+.cont01 .inner .list .item div p{
+    position: absolute; /*  상위 부모중 position에 영향을 받아 이동함 */
+    top: 0;   /* 엡솔루트, 픽시드  쓰면 무조건  좌표값 설정해줘야함*/
+    left: 0;    
+    width: 50px;
+    padding: 5px 0;
+    background-color: #333;
+    text-align: center;
+    color: aliceblue;
+}
+.cont01 .inner .list .item > p{ 
+    height: 45px;
+    background-color: #333;
+    color: aliceblue;
+    line-height: 45px;
+    padding-left: 10px;
+    margin-top: 5px;
+    transition: 0.7s;
+}
+.cont01 .inner .list .item > p:hover{
+    background-color: darkgoldenrod;
+    color: darkblue;
+    transform: scale(1.03);
+    transition: 0.7s;
+}
